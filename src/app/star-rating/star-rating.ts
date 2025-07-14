@@ -1,11 +1,4 @@
-import {
-  Component,
-  computed,
-  inject,
-  input,
-  output,
-  signal,
-} from '@angular/core';
+import { Component, computed, inject, input, output, signal } from '@angular/core';
 import { NarrationService } from '../narration-service';
 
 function range(from: number, to: number) {
@@ -57,7 +50,7 @@ export class StarRatingComponent {
   starInfo = computed<Array<StarInfo>>(() => {
     const cur = this.currentRating();
     const max = this.maxRating();
-    const info = range(0, max).map((idx) => ({
+    const info = range(0, max).map(idx => ({
       which: idx + 1, // map (0..max - 1) to (1..max)
       filled: idx < cur,
     }));
@@ -76,8 +69,7 @@ export class StarRatingComponent {
   }
 
   protected speakStars(
-    formatter: (current: number, max: number) => string = (cur, max) =>
-      `${cur} STARS OUT OF ${max}`,
+    formatter: (current: number, max: number) => string = (cur, max) => `${cur} STARS OUT OF ${max}`,
   ) {
     if (this.enableNarrate()) {
       if (this.narrateSvc == null) {

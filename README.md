@@ -19,20 +19,20 @@ Example usage:
 
 **Options:**
 
-* `maxRating` *(default: `5`)*  
-The maximum number of stars this rating input can give.
+- `maxRating` _(default: `5`)_  
+  The maximum number of stars this rating input can give.
 
-* `enableNarrate` *(default: `false`)*  
-Whether to send TTS calls to a `NarrationService` (see [stub example](src/app/narration-service.ts)).
+- `enableNarrate` _(default: `false`)_  
+  Whether to send TTS calls to a `NarrationService` (see [stub example](src/app/narration-service.ts)).
 
-* `activeIcon` *(default: `"★"`)*  
-The character to use to represent a filled star.
+- `activeIcon` _(default: `"★"`)_  
+  The character to use to represent a filled star.
 
-* `inactiveIcon` *(default: `"☆"`)*  
-The character to use to represent an empty star.
+- `inactiveIcon` _(default: `"☆"`)_  
+  The character to use to represent an empty star.
 
-* `showRatingText` *(default: `true`)*  
-Whether to show the rating label below for accessibility ("Rating: X stars out of Y").
+- `showRatingText` _(default: `true`)_  
+  Whether to show the rating label below for accessibility ("Rating: X stars out of Y").
 
 # Running the Example
 
@@ -53,5 +53,3 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-
