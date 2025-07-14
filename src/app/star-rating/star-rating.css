@@ -1,6 +1,6 @@
 .stars-row {
-  margin: 5px;
   padding: 5px;
+  margin: 5px;
   border-bottom: 1px solid rgba(120, 120, 120, 0.3);
 }
 
@@ -11,11 +11,11 @@
 
 .single-star {
   display: inline-block;
-  font-size: 120%;
   padding: 2px;
+  font-size: 120%;
+  cursor: pointer;
   border-radius: 3px;
   transition: 200ms background-color;
-  cursor: pointer;
 }
 
 .single-star:hover {
@@ -31,11 +31,12 @@
 
 .single-star.active:hover {
   /* brighter gold color */
-  color: rgb(1.0, 0.9, 0.3);
+  color: rgb(1, 0.9, 0.3);
 }
 
 /* focus highlight */
-.single-star:focus, .star-row:focus {
+.single-star:focus,
+.star-row:focus {
   outline: 1px solid #0066cc;
   outline-offset: 2px;
 }
