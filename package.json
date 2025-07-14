@@ -7,8 +7,9 @@
 		"email": "gr.wallabra@proton.me",
 		"url": "https://wallabra.github.io/"
 	},
-
+	"license": "MIT",
 	"version": "0.0.1",
+
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
