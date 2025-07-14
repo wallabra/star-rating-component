@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.log-container {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50%;
+  padding: 20px;
+  display: flex;
+  background-color: rgba(100, 100, 100, 0.2);
+  flex-direction: column;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5em;
+  padding-left: 1em;
+  border-left: 1px solid black;
+  border-radius: 0.3em;
+}
+
+.log {
+  flex: 1;
+}
+
+.log-message {
+  font-family: monospace;
+}

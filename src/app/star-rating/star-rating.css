@@ -1,0 +1,41 @@
+.stars-row {
+  margin: 5px;
+  padding: 5px;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.3);
+}
+
+.stars-row:hover {
+  /* brighter border to highlight */
+  border-bottom: 1px solid rgba(120, 120, 120, 0.5);
+}
+
+.single-star {
+  display: inline-block;
+  font-size: 120%;
+  padding: 2px;
+  border-radius: 3px;
+  transition: 200ms background-color;
+  cursor: pointer;
+}
+
+.single-star:hover {
+  /* sink in toward dark gray to highlight */
+  background-color: rgba(50, 60, 90, 0.2);
+}
+
+.single-star.active {
+  /*ightly darker gold color */
+  color: rgb(0.8, 0.7, 0.1);
+  transition: 200ms color;
+}
+
+.single-star.active:hover {
+  /* brighter gold color */
+  color: rgb(1.0, 0.9, 0.3);
+}
+
+/* focus highlight */
+.single-star:focus, .star-row:focus {
+  outline: 1px solid #0066cc;
+  outline-offset: 2px;
+}

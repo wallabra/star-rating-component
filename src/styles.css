@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  height: 100vh;
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}

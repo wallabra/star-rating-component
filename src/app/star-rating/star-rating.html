@@ -1,0 +1,17 @@
+@for (star of starInfo(); track star.which) {
+  <div class="single-star"
+       [class.active]="star.filled"
+       [attr.aria-label]="'Rate ' + star.which + ' stars'"
+       (click)="setStars(star.which)"
+       (touchend)="setStars(star.which)"
+  >
+  {{ star.filled ? activeIcon() : inactiveIcon() }}
+  </div>
+}
+@if (showRatingText()) {
+<div>
+  <span class="sr-only">
+    <b>Rating:</b>&nbsp;<i>{{ currentRating() }}</i> stars out of <i>{{ maxRating() }}</i>
+  </span>
+</div>
+}
