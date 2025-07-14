@@ -6,6 +6,7 @@ import analog from '@analogjs/platform';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
+// biome-ignore lint/style/noDefaultExport: Vite config requires default export
 export default defineConfig(({ mode }) => {
   return {
     root: __dirname,
@@ -15,7 +16,7 @@ export default defineConfig(({ mode }) => {
       reportCompressedSize: true,
       target: ['es2020'],
     },
-    plugins: [
+    lugins: [
       analog({
         ssr: false,
         static: true,
