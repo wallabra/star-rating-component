@@ -1,0 +1,181 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.0-beta.5/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["**", "!**/package.json", "!**/packages/api/src/database/migrations/workspace-resources/migrations.js"]
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "recommended": true,
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "off",
+        "useSortedProperties": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": "error",
+      "complexity": "error",
+      "correctness": {
+        "noUndeclaredVariables": "error",
+
+        "noPrivateImports": "off",
+        "noNodejsModules": "off",
+        "noUndeclaredDependencies": "off",
+        "useHookAtTopLevel": "off",
+        "useImportExtensions": "off"
+      },
+      "performance": "error",
+      "security": "error",
+      "style": {
+        "noCommonJs": "error",
+        "noDefaultExport": "error",
+        "noDoneCallback": "error",
+        "noExportedImports": "error",
+        "noInferrableTypes": "error",
+        "noNamespace": "error",
+        "noNegationElse": "error",
+        "noParameterAssign": "error",
+        "noParameterProperties": "error",
+        "noRestrictedGlobals": "error",
+        "noRestrictedImports": "error",
+        "noRestrictedTypes": "error",
+        "noShoutyConstants": "error",
+        "noSubstr": "error",
+        "noUnusedTemplateLiteral": "error",
+        "noUselessElse": "error",
+        "noValueAtRule": "error",
+        "noYodaExpression": "error",
+        "useAsConstAssertion": "error",
+        "useAtIndex": "error",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useCollapsedIf": "error",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": { "syntax": "generic" }
+        },
+        "useConsistentBuiltinInstantiation": "error",
+        "useConsistentMemberAccessibility": "error",
+        "useDefaultParameterLast": "error",
+        "useDefaultSwitchClause": "error",
+        "useEnumInitializers": "error",
+        "useExplicitLengthCheck": "error",
+        "useFilenamingConvention": "error",
+        "useForOf": "error",
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "requireAscii": true,
+            "strictCase": true,
+            "conventions": [
+              {
+                "selector": {
+                  "kind": "typeLike"
+                },
+                "match": "[A-Z][a-zA-Z0-9]*(?:_[A-Z][a-zA-Z0-9]*)*",
+                "formats": ["PascalCase"]
+              },
+              {
+                "selector": {
+                  "kind": "const",
+                  "scope": "global"
+                },
+                "match": "[A-Z][a-zA-Z0-9]*(?:_[A-Z][a-zA-Z0-9]*)*|[A-Z][A-Z0-9_]*[A-Z0-9]|[a-z][a-zA-Z0-9]*",
+                "formats": ["PascalCase", "CONSTANT_CASE", "camelCase"]
+              }
+            ]
+          }
+        },
+        "useNodeAssertStrict": "error",
+        "useNumberNamespace": "error",
+        "useSelfClosingElements": "error",
+        "useShorthandAssign": "error",
+        "useSingleVarDeclarator": "error",
+        "useThrowNewError": "error",
+        "useThrowOnlyError": "error",
+        "useTrimStartEnd": "error",
+
+        "noEnum": "off",
+        "noNestedTernary": "off",
+        "noProcessEnv": "off"
+      },
+      "suspicious": {
+        "noDuplicateTestHooks": "error",
+        "noEmptyBlockStatements": "error",
+        "noEvolvingTypes": "error",
+        "noExportsInTest": "error",
+        "noFocusedTests": "error",
+        "noMisplacedAssertion": "error",
+        "noSkippedTests": "error",
+        "noVar": "error",
+        "useErrorMessage": "error",
+        "useGuardForIn": "error",
+        "useNumberToFixedDigitsArgument": "error",
+        "useStrictMode": "error",
+
+        "noConsole": "off",
+        "useAwait": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true,
+    "formatWithErrors": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 120,
+    "attributePosition": "multiline",
+    "bracketSpacing": true
+  },
+  "javascript": {
+    "parser": { "unsafeParameterDecoratorsEnabled": true },
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "quoteProperties": "preserve",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "asNeeded",
+      "bracketSpacing": true,
+      "bracketSameLine": true,
+      "attributePosition": "multiline"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*/.storybook/**", "**/*.stories.ts"],
+      "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
+    }
+  ]
+}
