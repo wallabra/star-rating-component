@@ -19,7 +19,6 @@ export class App {
 		message.classList.add("log-message");
 		message.innerText = `Star rating changed to ${numStars}`;
 
-		console.log(log);
 		log.nativeElement.appendChild(message);
 	}
 
