@@ -4,8 +4,10 @@ import { Injectable } from "@angular/core";
 	providedIn: "root",
 })
 export class NarrationService {
-	// stub
 	speak(text: string) {
-		console.log(`TTS: ${text}`);
+		if ("speechSynthesis" in window) {
+			const utterance = new SpeechSynthesisUtterance(text);
+			speechSynthesis.speak(utterance);
+		}
 	}
 }
