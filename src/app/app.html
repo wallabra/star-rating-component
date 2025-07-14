@@ -1,7 +1,11 @@
 <h1>Star Rating Component</h1>
 
 <div class="main">
-  <app-star-rating (starsChanged)="handleStarsChanged($event)" [enableNarrate]="true" />
+  <app-star-rating
+    (starsChanged)="handleStarsChanged($event)"
+    [enableNarrate]="true"
+    [maxRating]="10"
+    [initialRating]="1" />
 
   <div class="log-container">
     <div><h3>Log</h3></div>
