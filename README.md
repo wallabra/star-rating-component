@@ -19,19 +19,19 @@ Example usage:
 
 **Options:**
 
-* `maxRating` (default: `5`)
+* `maxRating` *(default: `5`)*  
 The maximum number of stars this rating input can give.
 
-* `enableNarrate` (default: `false`)
+* `enableNarrate` *(default: `false`)*  
 Whether to send TTS calls to a `NarrationService` (see [stub example](src/app/narration-service.ts)).
 
-* `activeIcon` (default: `"★"`)
+* `activeIcon` *(default: `"★"`)*  
 The character to use to represent a filled star.
 
-* `inactiveIcon` (default: `"☆"`)
+* `inactiveIcon` *(default: `"☆"`)*  
 The character to use to represent an empty star.
 
-* `showRatingText` (default: `true`)
+* `showRatingText` *(default: `true`)*  
 Whether to show the rating label below for accessibility ("Rating: X stars out of Y").
 
 # Running the Example
